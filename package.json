@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ahabhgk/PNode.git"
+    "url": "git+https://github.com/ahabhgk/promise-node.git"
   },
   "author": "ahabhgk",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ahabhgk/PNode/issues"
+    "url": "https://github.com/ahabhgk/promise-node/issues"
   },
-  "homepage": "https://github.com/ahabhgk/PNode#readme",
+  "homepage": "https://github.com/ahabhgk/promise-node#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.3"
   }
