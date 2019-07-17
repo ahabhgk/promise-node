@@ -5,13 +5,13 @@ A simple way to handle asynchronous.
 ## install
 
 ```shell
-$ yarn add pnode
+$ yarn add promise-node
 ```
 
 or
 
 ```shell
-$ npm install --save pnode
+$ npm install --save promise-node
 ```
 
 ## usage
@@ -27,7 +27,7 @@ When you using `function () {}`, you can use `this.next()` to resolve this funct
 When you using arrow function, you can use `instance.next()` to resolve this function.
 
 ```js
-import PNode from 'pnode'
+import PNode from 'promise-node'
 
 const p1 = new PNode(function (a) {
   console.log('start')

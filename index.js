@@ -1,4 +1,4 @@
-export class PNode {
+export default class PNode {
   constructor(fn) {
     this.fn = fn
     this.nextNode = null
