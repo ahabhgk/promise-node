@@ -1,6 +1,6 @@
 {
   "name": "promise-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple way to handle asynchronous.",
   "main": "./dist/index.js",
   "scripts": {
