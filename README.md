@@ -1,4 +1,4 @@
-# PNode
+# promise-node
 
 A simple way to handle asynchronous.
 
