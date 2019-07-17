@@ -1,5 +1,5 @@
 {
-  "name": "pnode",
+  "name": "promise-node",
   "version": "1.0.0",
   "description": "A simple way to handle asynchronous.",
   "main": "./dist/index.js",
