@@ -1,0 +1,22 @@
+{
+  "name": "pnode",
+  "version": "1.0.0",
+  "description": "A simple way to handle asynchronous.",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "parcel build index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahabhgk/PNode.git"
+  },
+  "author": "ahabhgk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahabhgk/PNode/issues"
+  },
+  "homepage": "https://github.com/ahabhgk/PNode#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
+}
