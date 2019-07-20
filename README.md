@@ -46,7 +46,7 @@ const p3 = new PromiseNode((c) => {
 })
 
 p1.setNext(p2).setNext(p3)
-p1(0)
+p1.start(0)
 ```
 
 ### `fn` mode
@@ -77,7 +77,7 @@ const p3 = (c) => {
 }
 
 p1.setNext(p2).setNext(p3)
-p1.start(0)
+p1(0)
 ```
 
 ## I made this repo just for fun and learn CoR pattern.
