@@ -16,31 +16,29 @@ $ npm install --save promise-node
 
 ## usage
 
-Use `.start(param1, param2, ...)` to pass arguments to the first PNode's function.
+Use `.start(param1, param2, ...)` to pass arguments to the first promiseNode's function.
 
-Use `.next(param1, param2, ...)` to pass arguments to next PNode's function.
+Use `.next(param1, param2, ...)` to pass arguments to next promiseNode's function.
+
+When you using `function () {}`, you can use `this.next()` or `instance.next()` to resolve this function, but when you using arrow function, `instance.next()` is the only way to resolve this arrow function.
 
 ### `class` mode
 
-When you using `function () {}`, you can use `this.next()` to resolve this function.
-
-When you using arrow function, you can use `instance.next()` to resolve this function.
-
 ```js
-import PNode from 'promise-node'
+import PromiseNode from 'promise-node'
 
-const p1 = new PNode(function (a) {
+const p1 = new PromiseNode(function (a) {
   console.log('start')
   setTimeout(() => {
     console.log(a++)
     this.next(a, 'hah')
   }, 2000)
 })
-const p2 = new PNode((b, str) => {
+const p2 = new PromiseNode((b, str) => {
   console.log(b, str)
   p2.next(b + str)
 })
-const p3 = new PNode((c) => {
+const p3 = new PromiseNode((c) => {
   setTimeout(() => {
     console.log(c)
     console.log('end')
@@ -48,14 +46,18 @@ const p3 = new PNode((c) => {
 })
 
 p1.setNext(p2).setNext(p3)
-p1.start(0)
+p1(0)
 ```
 
 ### `fn` mode
 
-When you using this mode, you can only use `instance.next` to resolve this function.
+When you open this mode, the `Function.prototype` will add two function.
 
 ```js
+import PromiseNode from 'promise-node'
+
+PromiseNode.fn() // open `fn` mode
+
 const p1 = function (a) {
   console.log('start')
   setTimeout(() => {
@@ -78,4 +80,6 @@ p1.setNext(p2).setNext(p3)
 p1.start(0)
 ```
 
-## I made this repo just for fun and 装逼 😎.
+## I made this repo just for fun and learn CoR pattern.
+
+There are lots of better way to handle asynchronous, you even can change Koa's onion model (or other framework) to handle asynchronous, I'm just a FE beginner and very interested in it.

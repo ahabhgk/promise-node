@@ -1,4 +1,4 @@
-export default class PNode {
+export default class PromiseNode {
   constructor(fn) {
     this.fn = fn
     this.nextNode = null
@@ -15,16 +15,14 @@ export default class PNode {
   start(...args) {
     this.fn(...args)
   }
-}
 
-Function.prototype.setNext = function (fn) {
-  return this.nextFn = fn
-}
+  fn() {
+    Function.prototype.setNext = function (fn) {
+      return this.nextFn = fn
+    }
 
-Function.prototype.next = function (...args) {
-  return this.nextFn && this.nextFn(...args)
-}
-
-Function.prototype.start = function (...args) {
-  this(...args)
+    Function.prototype.next = function (...args) {
+      return this.nextFn && this.nextFn(...args)
+    }
+  }
 }
